@@ -28,12 +28,17 @@ public class ShuffleCards
        
         System.out.printf("\n\n");
 
+        // place where the actual card gonna exchange
         int targetNumber = 0;
         String targetCard = "0";
 
+        // shuffle the deck: go card to card and change its place
         for(int t = 0; t < (deck.length-1); t++){
+
+            // use random method (equally probability) to find a randomized place to exchange places
             targetNumber = ((int)(Math.random()*(52-t))) + t;
 
+            // exchange places between two cards
             targetCard = deck[targetNumber];
 
             deck[targetNumber] = deck[t];
@@ -41,6 +46,8 @@ public class ShuffleCards
             deck[t] = targetCard;
         }
 
+        // print out all the deck shuffled
+        
         for(int t = 0; t < deck.length; t++){
             System.out.printf("%s ", deck[t]);
         }
