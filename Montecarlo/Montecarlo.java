@@ -31,6 +31,7 @@ public class Montecarlo
             if(stack == goal) target++; 
         }
 
+        // we should have goal/stack == target/experiments
         System.out.printf("Ganhamos em %d de %d\n", target, experiments);
     }
 }
